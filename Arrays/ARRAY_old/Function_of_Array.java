@@ -1,14 +1,14 @@
 import java.util.Scanner;
 class Function {
     static Scanner sc = new Scanner(System.in);
-    int size, i;
+    final int size; 
+    int i;
 
     Function() {
         this.size = 0;
     }
 
     void Creat(int size, int[] arr) {
-        this.size = size;
         for (i = 0; i < size; i++) {
             System.out.println("Enter number [" + (i + 1) +"]:");
             arr[i] = sc.nextInt();

@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Array
 {
     static Scanner sc = new Scanner (System.in); 
-    private int[] arr;
+    private final int[] arr;
     public int size;
     public Array(int capacity)
     {
@@ -83,12 +83,12 @@ public class Array
             System.out.println(" Overflow condition! ");
             return;
         }
-        // for(int i = 0 ; i < size ; i++)
-        // {
-        //     arr[size] = arr[size+1];
-        // }
-        size--;
-        arr[size--] = 0;
+        else if(arr.length == 0 || size == 0)
+        {
+            System.out.println(" you have deleted all array ");
+
+        }
+        arr[--size] = null;
 
     }
     public void Delete_At_Position()
@@ -99,9 +99,9 @@ public class Array
         {
             System.out.println(" Element is not present ");
         }
-        else if(size >= arr.length)
+        else if( position > arr.length )
         {
-            System.out.println(" Overflow condition!");
+            System.out.println(" This element is not present ");
         }
         else
         {
@@ -115,14 +115,20 @@ public class Array
     }
     public void Delete_At_First()
     {
-        System.out.println(" Enter number: ");
+        
         if(size >= arr.length)
         {
             System.out.println(" Overflow condition!");
         }
+        else if( arr[size] == size-1)
+        {
+            System.out.println(" cannot delete you have reached at end of array");
+
+        }
         else
         {
-            for(int i = 1 ; i < arr.length ; i++)
+            System.out.println(" Number deleted: ");
+            for(int i = 1 ; i < size+1 ; i++)
             {
                 arr[i-1] = arr[i];
             }
@@ -132,9 +138,9 @@ public class Array
     public void show()
     {
         System.out.print("Array are: ");
-        for(int i:arr)
+        for(int i = 0 ; i < size ; i++)
         {
-            System.out.print(" " + i);
+            System.out.print(" " + arr[i] );
         }
             System.out.println(" ");
     }
