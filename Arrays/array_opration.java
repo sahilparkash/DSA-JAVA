@@ -17,9 +17,9 @@ public class array_opration
                 case 2 -> { f.Insert_At_First();f.show();}
                 case 3 -> { f.Insert_At_Last();f.show();}
                 case 4 -> { f.Insert_At_Position();f.show();}
-                case 6 -> { f.Delete_At_First();f.show();}
-                case 7 -> { f.Delete_At_Last();f.show();}
-                case 8 -> { f.Delete_At_Position();f.show();}
+                case 5 -> { f.Delete_At_First();f.show();}
+                case 6 -> { f.Delete_At_Last();f.show();}
+                case 7 -> { f.Delete_At_Position();f.show();}
                 case 0 -> num=false;
                 default -> {System.out.println("wrong option");}
 

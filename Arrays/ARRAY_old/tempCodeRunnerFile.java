@@ -1,2 +1,0 @@
-System.out.println("1.To  Enter element in arrya"+" 2.TO Insert_at_First"+" 3.To Insert_at_Last"+" 4.Insert_at_Anypotion");
-            System.out.println("5.TO Delete_at_First"+" 6.To Delete_at_Last"+" 7.Delete_at_Anypotion"+" 0.to stop");

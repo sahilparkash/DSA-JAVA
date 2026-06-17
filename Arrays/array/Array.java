@@ -77,18 +77,23 @@ public class Array
     }
     public void Delete_At_Last()
     {
-        System.out.println("Enter last numbber:");
+        System.out.println(" Last number Deleted : ");
         if(size >= arr.length)
         {
-            System.out.println(" Overflow condition!");
+            System.out.println(" Overflow condition! ");
             return;
         }
-        arr[size--]=0 ;
+        // for(int i = 0 ; i < size ; i++)
+        // {
+        //     arr[size] = arr[size+1];
+        // }
+        size--;
+        arr[size--] = 0;
 
     }
     public void Delete_At_Position()
     {
-        System.out.println(" Enter positon of element : ");
+        System.out.println(" Delete_At_Position : ");
         int position = sc.nextInt();
         if(position >= arr.length)
         {
@@ -100,12 +105,11 @@ public class Array
         }
         else
         {
-            System.out.println(" Enter number: ");
-            for (int i = size-1; i >= position; i--)
+            System.out.println("  Number deleted : ");
+            for (int i = position ; i <size ; i++)
             {
-                arr[ i+1 ] = arr[ i ];
+                arr[ i ] = arr[ i+1 ];
             }
-                arr[ position ] = sc.nextInt();
         }
 
     }
@@ -118,11 +122,10 @@ public class Array
         }
         else
         {
-            for (int i = size-1; i >= 0; i--)
+            for(int i = 1 ; i < arr.length ; i++)
             {
-                arr[ i+1 ] = arr[ i ];
+                arr[i-1] = arr[i];
             }
-                arr[ 0 ] = sc.nextInt();
         }
 
     }
