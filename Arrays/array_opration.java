@@ -20,6 +20,7 @@ public class array_opration
                 case 5 -> { f.Delete_At_First();f.show();}
                 case 6 -> { f.Delete_At_Last();f.show();}
                 case 7 -> { f.Delete_At_Position();f.show();}
+                case 8 -> { f.Bubble_sort();f.show();}
                 case 0 -> num=false;
                 default -> {System.out.println("wrong option");}
 

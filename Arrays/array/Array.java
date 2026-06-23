@@ -4,7 +4,7 @@ public class Array
 {
     static Scanner sc = new Scanner (System.in); 
     private final int[] arr;
-    public int size;
+    public int size,i;
     public Array(int capacity)
     {
         arr = new int [capacity];
@@ -15,7 +15,7 @@ public class Array
         size = sc.nextInt();
         if(size < arr.length)
         {
-            for(int i=0;i<size;i++)
+            for( i=0;i<size;i++)
             {
                 System.out.println("Enter Array [" +(i+1)+ "]:");
                 arr[i]=sc.nextInt();
@@ -50,7 +50,7 @@ public class Array
         else
         {
             System.out.println(" Enter number: ");
-            for (int i = size-1; i >= position; i--)
+            for ( i = size-1; i >= position; i--)
             {
                 arr[ i+1 ] = arr[ i ];
             }
@@ -67,7 +67,7 @@ public class Array
         }
         else
         {
-            for (int i = size-1; i >= 0; i--)
+            for ( i = size-1; i >= 0; i--)
             {
                 arr[ i+1 ] = arr[ i ];
             }
@@ -88,7 +88,7 @@ public class Array
             System.out.println(" you have deleted all array ");
 
         }
-        arr[--size] = null;
+        arr[--size] = 0;
 
     }
     public void Delete_At_Position()
@@ -106,7 +106,7 @@ public class Array
         else
         {
             System.out.println("  Number deleted : ");
-            for (int i = position ; i <size ; i++)
+            for ( i = position ; i <size ; i++)
             {
                 arr[ i ] = arr[ i+1 ];
             }
@@ -128,9 +128,30 @@ public class Array
         else
         {
             System.out.println(" Number deleted: ");
-            for(int i = 1 ; i < size+1 ; i++)
+            for( i = 1 ; i < size+1 ; i++)
             {
                 arr[i-1] = arr[i];
+            }
+        }
+
+    }
+    public void Bubble_sort()
+    {
+        if( arr.length == 0 || arr[size] == 0)
+        {
+            System.out.println(" Array is empty ");
+        }
+       for ( i = 0 ; i < arr.length-1 ; i++)
+        {
+            for(int  j = 0 ; j<arr.length-1 ; j++)
+            {
+
+                if( arr[j] > arr[j+1] )
+                {
+                    int temp = arr[ j ] ;
+                    arr[j] = arr[j+1] ;
+                    arr[j+1] = temp ;
+                }
             }
         }
 
@@ -138,7 +159,7 @@ public class Array
     public void show()
     {
         System.out.print("Array are: ");
-        for(int i = 0 ; i < size ; i++)
+        for( i = 0 ; i < size ; i++)
         {
             System.out.print(" " + arr[i] );
         }
